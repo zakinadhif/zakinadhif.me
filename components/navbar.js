@@ -1,0 +1,21 @@
+import Image from "next/image"
+import Link from "next/link"
+
+export default function Navbar() {
+    return (
+        <div className="flex h-32 relative py-10 gap-7 items-center">
+            <Image src="/assets/code.svg" width={74} height={41} />
+            <div className="flex flex-col justify-center">
+                <div className="font-bold text-2xl">zaki_nadhif.txt</div>
+                <nav className="font-light text-xs tracking-widest text-bluemoon">
+                    <ul className="flex divide-x divide-bluemoon divide-dotted">
+                        <li className="px-6 pl-0"><Link href="/home"><a>Home</a></Link></li>
+                        <li className="px-6"><Link href="/about"><a>About</a></Link></li>
+                        <li className="px-6"><Link href="/writing"><a>Writing</a></Link></li>
+                        <li className="px-6 pr-0"><Link href="/projects"><a>Projects</a></Link></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    )
+}
