@@ -6,7 +6,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout>
       <Head>
-        <title>Zaki Nadhif's dot Me</title>
+        <title>Zaki Nadhif's About</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="text-2xl font-medium text-bluemoon mb-2">About Me</h1>

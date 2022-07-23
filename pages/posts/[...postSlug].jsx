@@ -1,5 +1,6 @@
-import { getPostSlugs, getPostData } from "../../lib/posts"
+import { getPostSlugs, getPostData } from "../../lib/posts";
 import Footer from "../../components/footer";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function Post({ postData }) {
@@ -13,10 +14,14 @@ export default function Post({ postData }) {
         {i != arr.length - 1 ? "," : ""}
       </span>
     ));
-  }
+  };
 
   return (
     <div className="font-roboto-mono bg-[#161A26] text-whitesmoke">
+      <Head>
+        <title>{postData.title} | Zaki Nadhif</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="flex flex-col max-w-2xl w-full mx-auto min-h-screen">
         <div className="grow mt-8">
           <h1 className="text-2xl font-medium text-bluemoon tracking-tight">
@@ -24,12 +29,14 @@ export default function Post({ postData }) {
           </h1>
           <span className="text-whitesmoke text-sm font-medium">
             {postData.group ? (
-            <Link href={`/groups/${postData.group}`}>
-              <a className="font-bold uppercase hover:underline">
-                {postData.group}
-              </a>
-            </Link>
-            ) : <span className="font-bold uppercase">zaki_nadhif.txt</span>}
+              <Link href={`/groups/${postData.group}`}>
+                <a className="font-bold uppercase hover:underline">
+                  {postData.group}
+                </a>
+              </Link>
+            ) : (
+              <span className="font-bold uppercase">zaki_nadhif.txt</span>
+            )}
             {` ${postData.date} | ${postData.readingTime}`}
             {postData.tags ? (
               <>
@@ -54,15 +61,15 @@ export function getStaticPaths() {
   const paths = getPostSlugs();
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.postSlug);
   return {
     props: {
-      postData
-    }
-  }
+      postData,
+    },
+  };
 }
