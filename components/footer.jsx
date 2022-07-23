@@ -8,8 +8,8 @@ export default function Footer() {
                 <ul className="flex divide-x divide-smoke divide-dotted underline underline-offset-1">
                     <li className="px-3 pl-0"><Link href="/"><a>Home</a></Link></li>
                     <li className="px-3"><Link href="/about"><a>About</a></Link></li>
-                    <li className="px-3"><Link href="/writing"><a>Writing</a></Link></li>
-                    <li className="px-3 pr-0"><Link href="/projects"><a>Projects</a></Link></li>
+                    <li className="px-3"><Link href="/archives"><a>Writing</a></Link></li>
+                    <li className="px-3 pr-0"><a href="https://github.com/cowdingus">Projects</a></li>
                 </ul>
             </nav>
         </footer>
