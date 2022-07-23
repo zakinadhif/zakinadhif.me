@@ -9,10 +9,10 @@ export default function Navbar() {
                 <div className="font-bold text-3xl">zaki_nadhif.txt</div>
                 <nav className="font-light text-sm tracking-widest text-bluemoon">
                     <ul className="flex divide-x divide-bluemoon divide-dotted">
-                        <li className="px-6 pl-0"><Link href="/#home"><a>Home</a></Link></li>
-                        <li className="px-6"><Link href="/#about"><a>About</a></Link></li>
-                        <li className="px-6"><Link href="/#writing"><a>Writing</a></Link></li>
-                        <li className="px-6 pr-0"><Link href="/#projects"><a>Projects</a></Link></li>
+                        <li className="px-6 pl-0"><Link href="/#home"><a className="hover:underline underline-offset-1">Home</a></Link></li>
+                        <li className="px-6"><Link href="/#about"><a className="hover:underline underline-offset-1">About</a></Link></li>
+                        <li className="px-6"><Link href="/#writing"><a className="hover:underline underline-offset-1">Writing</a></Link></li>
+                        <li className="px-6 pr-0"><Link href="/#projects"><a className="hover:underline underline-offset-1">Projects</a></Link></li>
                     </ul>
                 </nav>
             </div>
