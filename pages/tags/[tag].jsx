@@ -11,7 +11,7 @@ export default function Tag({ tag, postsGroupedByYear }) {
   return (
     <Layout>
       <Head>
-        <title>Zaki Nadhif | {tag} Posts</title>
+        <title>{`Zaki Nadhif | ${tag} Posts`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="text-xl font-medium mb-4 text-bluemoon">

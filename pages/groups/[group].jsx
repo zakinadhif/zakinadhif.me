@@ -11,7 +11,7 @@ import {
     return (
       <Layout>
         <Head>
-          <title>Zaki Nadhif | {group}</title>
+          <title>{`Zaki Nadhif | ${group}`}</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <h1 className="text-xl font-medium mb-4 text-bluemoon">

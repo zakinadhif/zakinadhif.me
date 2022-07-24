@@ -19,7 +19,7 @@ export default function Post({ postData }) {
   return (
     <div className="font-roboto-mono bg-[#161A26] text-whitesmoke">
       <Head>
-        <title>{postData.title} | Zaki Nadhif</title>
+        <title>{`${postData.title} | Zaki Nadhif`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col max-w-2xl w-full mx-auto min-h-screen">
