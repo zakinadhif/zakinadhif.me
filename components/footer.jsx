@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer className="text-sm text-smoke py-10 flex justify-between">
+        <footer className="text-sm text-smoke py-10 flex flex-col-reverse items-center md:flex-row md:justify-between">
             <div>Inspired By <a href="http://peterforgacs.github.io/" className="text-bluemoon underline">Peter Forgacs</a>' notes.txt</div>
             <nav className="font-thin tracking-wider text-smoke">
                 <ul className="flex divide-x divide-smoke divide-dotted underline underline-offset-1">
