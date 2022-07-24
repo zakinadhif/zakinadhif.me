@@ -23,7 +23,7 @@ export default function Tag({ tag, postsGroupedByYear }) {
             <h2 className="text-lg font-medium my-2">{year}</h2>
             {posts.map((post) => (
               <li className="ml-4">
-                <time className="text-smoke mr-6" datetime={post.date}>
+                <time className="text-smoke mr-6" dateTime={post.date}>
                   {post.date}
                 </time>
                 <Link href={`/posts/${post.slugStr}`}>

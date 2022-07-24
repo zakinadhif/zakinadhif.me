@@ -13,8 +13,8 @@ export default function Home({ allPostsData }) {
       <h2 className="text-2xl text-bluemoon mb-4 font-medium">Writing</h2>
       <ul className="space-y-1 font-medium">
         {allPostsData.map(({ slugStr, date, title }) => (
-          <li className="" key={slugStr}>
-            <span className="text-smoke mr-8">{date}</span>
+          <li className="flex" key={slugStr}>
+            <time className="text-smoke mr-8 shrink-0" dateTime={date}>{date}</time>
             <span className="underline underline-offset-1"><Link href={`/posts/${slugStr}`}><a>{title}</a></Link></span>
           </li>
         ))}
