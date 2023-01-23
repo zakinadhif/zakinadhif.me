@@ -11,9 +11,9 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h2 className="text-2xl text-bluemoon mb-4 font-medium">Writing</h2>
-      <ul className="space-y-1 font-medium">
+      <ul className="space-y-3 md:space-y-1 font-medium">
         {allPostsData.map(({ slugStr, date, title }) => (
-          <li className="flex" key={slugStr}>
+          <li className="flex md:flex-row flex-col" key={slugStr}>
             <time className="text-smoke mr-8 shrink-0" dateTime={date}>{date}</time>
             <span className="underline underline-offset-1"><Link href={`/posts/${slugStr}`}><a>{title}</a></Link></span>
           </li>
