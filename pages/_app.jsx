@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import '../styles/blog.css'
 import 'remixicon/fonts/remixicon.css'
+import 'highlight.js/styles/night-owl.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
