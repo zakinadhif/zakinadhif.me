@@ -23,8 +23,8 @@ export default function Post({ postData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col max-w-2xl w-full mx-auto min-h-screen">
-        <div className="grow mt-8">
-          <h1 className="text-2xl font-medium text-bluemoon tracking-tight">
+        <article className="grow mt-16">
+          <h1 className="text-4xl mb-3 font-bold text-bluemoon tracking-tight">
             {postData.title}
           </h1>
           <span className="text-whitesmoke text-sm font-medium">
@@ -46,11 +46,12 @@ export default function Post({ postData }) {
               </>
             ) : null}
           </span>
-          <div
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-            className="mt-4"
-          ></div>
-        </div>
+            <div
+              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+              className="mt-4"
+              id="article-container"
+            ></div>
+        </article>
         <Footer />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/blog.css'
 import 'remixicon/fonts/remixicon.css'
 
 function MyApp({ Component, pageProps }) {
