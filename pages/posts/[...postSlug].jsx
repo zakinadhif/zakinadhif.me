@@ -16,6 +16,38 @@ export default function Post({ postData }) {
     ));
   };
 
+  const renderPostGroup = () => {
+    return (
+      <>
+        {postData.group ? (
+          <Link href={`/groups/${postData.group}`}>
+            <a className="font-bold uppercase hover:underline">
+              {postData.group}
+            </a>
+          </Link>
+        ) : (
+          <span className="font-bold uppercase">zaki_nadhif.txt</span>
+        )}
+      </>
+    )
+  }
+
+  const renderPostMetadata = () => {
+    return (
+      <>
+        {renderPostGroup()}
+        {` ${postData.date} | ${postData.readingTime}`}
+        {postData.tags ? (
+          <>
+            {" | "}
+            <i className="ri-price-tag-3-fill"></i>
+            {getTags()}
+          </>
+        ) : null}
+      </>
+    );
+  }
+
   return (
     <div className="font-roboto-mono bg-[#161A26] text-whitesmoke overflow-auto px-5">
       <Head>
@@ -23,34 +55,23 @@ export default function Post({ postData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col max-w-2xl w-full mx-auto min-h-screen">
-        <article className="grow mt-16">
-          <h1 className="text-4xl mb-3 font-bold text-bluemoon tracking-tight">
-            {postData.title}
-          </h1>
-          <span className="text-whitesmoke text-sm font-medium">
-            {postData.group ? (
-              <Link href={`/groups/${postData.group}`}>
-                <a className="font-bold uppercase hover:underline">
-                  {postData.group}
-                </a>
-              </Link>
-            ) : (
-              <span className="font-bold uppercase">zaki_nadhif.txt</span>
-            )}
-            {` ${postData.date} | ${postData.readingTime}`}
-            {postData.tags ? (
-              <>
-                {" | "}
-                <i className="ri-price-tag-3-fill"></i>
-                {getTags()}
-              </>
-            ) : null}
-          </span>
-            <div
-              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-              className="mt-4"
-              id="article-container"
-            ></div>
+        <Link href="../">
+          <a className="flex items-center gap-2 mt-8 hover:text-bluemoon self-start"><i className="ri-arrow-left-line text-2xl hover:no-underline" /> Go Back</a>
+        </Link>
+        <article className="grow mt-8">
+          <header>
+            <h1 className="text-4xl mb-1 font-bold text-bluemoon tracking-tight">
+              {postData.title}
+            </h1>
+            <span className="text-whitesmoke text-sm font-medium">
+              {renderPostMetadata()}
+            </span>
+          </header>
+          <div
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            className="mt-4"
+            id="article-container"
+          />
         </article>
         <Footer />
       </div>
