@@ -1,5 +1,5 @@
 ---
-title: 'Working with Keyboard and Mouse in SFML'
+title: 'Working with Keyboard and Mouse in SFML [DRAFT]'
 date: '2023-02-05'
 group: 'game_engine.txt'
 tags: ['SFML', 'GameDev']
