@@ -4,6 +4,18 @@ import Head from "next/head";
 import Link from "next/link";
 
 export default function Archives({ postsGroupedByYear, postTags, postGroups }) {
+  const formatDate = (d) => {
+    const date = new Date(d);
+
+    const months = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May',
+      'Jun', 'Jul', 'Aug', 'Sep', 'Oct',
+      'Nov', 'Dec'
+    ]
+
+    return `${months[date.getMonth()]} ${date.getDate().toString().padStart(2, '0')}, ${date.getFullYear()}`;
+  }
+
   return (
     <Layout>
       <Head>
@@ -28,7 +40,7 @@ export default function Archives({ postsGroupedByYear, postTags, postGroups }) {
               {posts.map((post) => (
                 <li className="md:ml-4 flex flex-col md:flex-row mb-1" key={post.slugStr}>
                   <time className="text-smoke mr-6 shrink-0" dateTime={post.date}>
-                    {post.date}
+                    {formatDate(post.date)}
                   </time>
                   <Link href={`/posts/${post.slugStr}`}>
                     <a className="hover:underline underline-offset-1">

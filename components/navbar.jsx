@@ -12,7 +12,7 @@ export default function Navbar() {
                         <li className="px-6 pl-0"><Link href="/"><a className="hover:underline underline-offset-1">Home</a></Link></li>
                         <li className="px-6"><Link href="/about"><a className="hover:underline underline-offset-1">About</a></Link></li>
                         <li className="px-6"><Link href="/archives"><a className="hover:underline underline-offset-1">Writing</a></Link></li>
-                        <li className="px-6 pr-0"><a href="https://github.com/cowdingus" className="hover:underline underline-offset-1">Projects</a></li>
+                        <li className="px-6 pr-0"><a href="https://github.com/zakinadhif" className="hover:underline underline-offset-1">Projects</a></li>
                     </ul>
                 </nav>
             </div>

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'roboto-mono': ['"Roboto Mono"']
+        'jetbrains-mono': ['"JetBrains Mono"']
       },
       colors: {
         'bluemoon': '#477BFF',
