@@ -37,8 +37,7 @@ export default function Home({ allPostsData }) {
       </ul>
       <h2 className="text-2xl text-bluemoon mb-4 font-medium mt-7 flex items-center gap-4"><i class="ri-code-s-slash-line font-medium" />Projects</h2>
       <ul className="space-y-1 font-medium">
-        <li><a className="underline underline-offset-1" href="https://github.com/cowdingus/SpaceShooter/tree/engine">Egienx</a>: A toy C++ game engine with Lua Scripting.</li>
-        <li><a className="underline underline-offset-1" href="https://example.com">Smart Garden</a>: Backyard garden automation with Arduino Uno.</li>
+        <li><a className="underline underline-offset-1" href="https://github.com/cowdingus/SpaceShooter/tree/engine">Egienx</a>: A WIP toy C++ game engine</li>
       </ul>
     </Layout>
   )
