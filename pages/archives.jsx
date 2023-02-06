@@ -1,7 +1,10 @@
 import { getPostTagsRaw, getPostGroupsRaw, getSortedPostsData, groupPostsByYear } from "../lib/posts";
-import Layout from "../components/layout";
+import Content from "../components/content";
 import Head from "next/head";
 import Link from "next/link";
+
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 export default function Archives({ postsGroupedByYear, postTags, postGroups }) {
   const formatDate = (d) => {
@@ -17,11 +20,12 @@ export default function Archives({ postsGroupedByYear, postTags, postGroups }) {
   }
 
   return (
-    <Layout>
+    <Content>
       <Head>
         <title>Zaki Nadhif's Archives</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <div className="p-4 bg-[#0e1018] border border-[#424964] rounded-md -mt-2 mb-4">
         <h2 className="font-medium">Tags:</h2>
         <div className="flex flex-wrap text-bluemoon space-x-3 mb-2">
@@ -53,7 +57,8 @@ export default function Archives({ postsGroupedByYear, postTags, postGroups }) {
           </li>
         ))}
       </ul>
-    </Layout>
+      <Footer />
+    </Content>
   );
 }
 

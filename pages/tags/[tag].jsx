@@ -3,17 +3,21 @@ import {
   getPostsWithTag,
   groupPostsByYear,
 } from "../../lib/posts";
-import Layout from "../../components/layout";
 import Link from "next/link";
 import Head from "next/head";
 
+import Content from "../../components/content";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
+
 export default function Tag({ tag, postsGroupedByYear }) {
   return (
-    <Layout>
+    <Content>
       <Head>
         <title>{`Zaki Nadhif | ${tag} Posts`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <h1 className="text-xl font-medium mb-4 text-bluemoon">
         Posts with tag: <span className="underline">{tag}</span>
       </h1>
@@ -38,7 +42,8 @@ export default function Tag({ tag, postsGroupedByYear }) {
           </li>
         ))}
       </ul>
-    </Layout>
+      <Footer />
+    </Content>
   );
 }
 

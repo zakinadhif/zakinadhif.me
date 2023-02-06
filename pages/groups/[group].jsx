@@ -3,17 +3,21 @@ import {
   getPostGroups,
   getPostsInGroup,
 } from "../../lib/posts";
-import Layout from "../../components/layout";
 import Link from "next/link";
 import Head from "next/head";
 
+import Content from "../../components/content";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
+
 export default function Tag({ group, postsGroupedByYear }) {
   return (
-    <Layout>
+    <Content>
       <Head>
         <title>{`Zaki Nadhif | ${group}`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <h1 className="text-xl font-medium mb-4 text-bluemoon">
         Posts in group: <span className="underline">{group}</span>
       </h1>
@@ -38,7 +42,8 @@ export default function Tag({ group, postsGroupedByYear }) {
           </li>
         ))}
       </ul>
-    </Layout>
+      <Footer />
+    </Content>
   );
 }
 

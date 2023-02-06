@@ -1,7 +1,9 @@
 import { getPostSlugs, getPostData } from "../../lib/posts";
-import Footer from "../../components/footer";
 import Head from "next/head";
 import Link from "next/link";
+
+import Content from "../../components/content";
+import Footer from "../../components/footer";
 
 export default function Post({ postData }) {
   const getTags = () => {
@@ -49,33 +51,31 @@ export default function Post({ postData }) {
   }
 
   return (
-    <div className="font-jetbrains-mono bg-[#161A26] text-whitesmoke overflow-auto">
+    <Content>
       <Head>
         <title>{`${postData.title} | Zaki Nadhif`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col max-w-2xl w-full mx-auto min-h-screen">
-        <Link href="../">
-          <a className="flex items-center gap-2 mt-8 hover:text-bluemoon self-start"><i className="ri-arrow-left-line text-2xl hover:no-underline" /> Go Back</a>
-        </Link>
-        <article className="grow mt-8">
-          <header>
-            <h1 className="text-4xl mb-1 font-bold text-bluemoon tracking-tight">
-              {postData.title}
-            </h1>
-            <span className="text-whitesmoke text-sm font-medium">
-              {renderPostMetadata()}
-            </span>
-          </header>
-          <div
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-            className="mt-4"
-            id="article-container"
-          />
-        </article>
-        <Footer />
-      </div>
-    </div>
+      <Link href="../">
+        <a className="flex items-center gap-2 hover:text-bluemoon self-start"><i className="ri-arrow-left-line text-2xl hover:no-underline" /> Go Back</a>
+      </Link>
+      <article className="mt-8">
+        <header>
+          <h1 className="text-4xl mb-1 font-bold text-bluemoon tracking-tight">
+            {postData.title}
+          </h1>
+          <span className="text-whitesmoke text-sm font-medium">
+            {renderPostMetadata()}
+          </span>
+        </header>
+        <div
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          className="mt-4"
+          id="article-container"
+        />
+      </article>
+      <Footer />
+    </Content>
   );
 }
 
