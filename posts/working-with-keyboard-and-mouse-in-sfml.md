@@ -1,6 +1,7 @@
 ---
-title: 'Working with Keyboard and Mouse in SFML [DRAFT]'
+title: 'Working with Keyboard and Mouse in SFML'
 date: '2023-02-05'
+lastEdited: '2023-02-08'
 group: 'sfml-tidbits.txt'
 tags: ['SFML', 'GameDev']
 ---
