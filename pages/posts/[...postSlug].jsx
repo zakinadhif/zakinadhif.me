@@ -61,7 +61,7 @@ export default function Post({ postData }) {
       </Link>
       <article className="mt-8">
         <header>
-          <h1 className="text-4xl mb-1 font-bold text-bluemoon tracking-tight">
+          <h1 className="text-5xl mb-1 font-extrabold text-bluemoon tracking-tight">
             {postData.title}
           </h1>
           <span className="text-whitesmoke text-sm font-medium">
