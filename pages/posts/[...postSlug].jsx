@@ -59,7 +59,7 @@ export default function Post({ postData }) {
       <Link href="../">
         <a className="flex items-center gap-2 hover:text-bluemoon self-start"><i className="ri-arrow-left-line text-2xl hover:no-underline" /> Go Back</a>
       </Link>
-      <article className="mt-8">
+      <main className="mt-8">
         <header>
           <h1 className="text-5xl mb-1 font-extrabold text-bluemoon tracking-tight">
             {postData.title}
@@ -73,7 +73,7 @@ export default function Post({ postData }) {
           className="mt-4"
           id="article-container"
         />
-      </article>
+      </main>
       <Footer />
     </Content>
   );
