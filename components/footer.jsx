@@ -11,7 +11,7 @@ export default function Footer() {
                     <li className="px-3 pr-0"><a href="https://github.com/cowdingus">Projects</a></li>
                 </ul>
             </nav>
-            <a href="https://github.com/zakinadhif">GitHub</a>
+            <a className="sm:inline-block hidden" href="https://github.com/zakinadhif">GitHub</a>
         </footer>
     )
 }
