@@ -1,40 +1,35 @@
 #article-container {
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     @apply mb-1 mt-6 text-bluemoon;
   }
-  
+
   h1 {
-    @apply text-5xl font-extrabold;
+    @apply text-3xl font-extrabold;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply font-bold;
   }
 
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-2xl;
   }
 
   h3 {
-    @apply text-xl font-bold;
+    @apply text-xl;
   }
 
   h4 {
-    @apply text-lg font-bold;
+    @apply text-lg;
   }
 
-  /*
-  h2 {
-    @apply text-4xl font-bold;
-  }
-  h3 {
-    @apply text-3xl font-bold;
-  }
-  h4 {
-    @apply text-2xl font-bold;
-  }
   h5 {
-    @apply text-xl font-bold;
+    @apply text-base;
   }
+
   h6 {
-    @apply text-lg font-bold;
-  }*/
+    @apply text-sm;
+  }
 
   ul, pre, p {
     @apply mb-4;
