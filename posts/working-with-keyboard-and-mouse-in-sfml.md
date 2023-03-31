@@ -6,6 +6,8 @@ group: 'sfml-tidbits.txt'
 tags: ['SFML', 'GameDev']
 ---
 
+## Events Overview
+
 To write an interactive software, you need to be able to easily get what the user is clicking and typing in your game. In SFML, interactive events information are stored inside `sf::Event`, this class contains a type enum and a union of member variables. This allows SFML to store a variety of data with different structures inside of one class.
 
 These events are sent by the OS by a mechanism that’s different between platforms, SFML abstracts this away from the user and provides them with a neat `sf::Event` and `sf::Window` abstraction.
