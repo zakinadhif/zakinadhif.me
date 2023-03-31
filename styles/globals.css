@@ -4,12 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html, #__next, body {
   @apply h-full
 }
 
 body {
-  @apply font-jetbrains-mono bg-[#161A26] text-whitesmoke overflow-auto h-full max-w-3xl w-full mx-auto px-8
+  @apply font-jetbrains-mono bg-[#161A26] text-whitesmoke overflow-auto max-w-3xl w-full mx-auto px-8
 }
 
 .h1 {
@@ -18,8 +18,4 @@ body {
 
 .h2 {
   @apply text-2xl text-bluemoon mb-4 mt-12 font-medium 
-}
-
-#__next {
-  @apply h-full
 }

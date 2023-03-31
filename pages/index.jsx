@@ -45,9 +45,9 @@ export default function Home({ allPostsData }) {
           </ul>
         </section>
         <section id="projects">
-          <h2 className="h2 flex items-center gap-4"><i class="ri-code-s-slash-line font-medium" />Projects</h2>
+          <h2 className="h2 flex items-center gap-4"><i className="ri-code-s-slash-line font-medium" />Projects</h2>
           <ul className="space-y-1 font-medium">
-            <li><a className="underline underline-offset-1" href="https://github.com/cowdingus/SpaceShooter/tree/engine">Egienx</a>: A WIP toy C++ game engine</li>
+            <li><a className="underline underline-offset-1" href="https://github.com/zakinadhif/SpaceShooter/tree/engine">Egienx</a>: A WIP toy C++ game engine</li>
           </ul>
         </section>
       </main>

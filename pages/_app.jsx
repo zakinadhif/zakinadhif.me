@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import '../styles/blog.css'
+import '../styles/blog.scss'
 import 'remixicon/fonts/remixicon.css'
 import 'highlight.js/styles/night-owl.css'
 
