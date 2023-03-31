@@ -27,27 +27,27 @@ Here’s a snippet of code that handles some window events in SFML:
 
 ```cpp
 int main() {
-    sf::RenderWindow window({400, 400}, "My SFML Window");
+  sf::RenderWindow window({400, 400}, "My SFML Window");
 
-    sf::Vector2f mousePosition {};
+  sf::Vector2f mousePosition {};
 
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            switch (event.type) {
-                case sf::Event::WindowClosed:
-                    window.close();
-                    break;
-                case sf::Event::MouseMoved:
-                    mousePosition = window.mapPixelToCoords({
-                        event.mouseMove.x,
-                        event.mouseMove.y
-                    });
-                    break;
-                default: continue;
-            }
-        }
+  while (window.isOpen()) {
+    sf::Event event;
+    while (window.pollEvent(event)) {
+      switch (event.type) {
+        case sf::Event::WindowClosed:
+          window.close();
+          break;
+        case sf::Event::MouseMoved:
+          mousePosition = window.mapPixelToCoords({
+            event.mouseMove.x,
+            event.mouseMove.y
+          });
+          break;
+        default: continue;
+      }
     }
+  }
 }
 ```
 
@@ -73,27 +73,27 @@ The difference between the `isUp` and `isPressed` variants is that `isUp` checks
 ```c++
 class Keyboard {
 public:
-    Keyboard() = delete;
+  Keyboard() = delete;
 
-    static bool isKeyPressed(sf::Keyboard::Key key);
-    static bool isKeyReleased(sf::Keyboard::Key key);
+  static bool isKeyPressed(sf::Keyboard::Key key);
+  static bool isKeyReleased(sf::Keyboard::Key key);
 
-    static bool isKeyUp(sf::Keyboard::Key key);
-    static bool isKeyDown(sf::Keyboard::Key key);
+  static bool isKeyUp(sf::Keyboard::Key key);
+  static bool isKeyDown(sf::Keyboard::Key key);
 
 private:
-    static void setKey(sf::Keyboard::Key key, bool pressed);
-    static void clearChangeInKeyStates();
+  static void setKey(sf::Keyboard::Key key, bool pressed);
+  static void clearChangeInKeyStates();
 
-    // Records change in key states
-    static std::array<bool, sf::Keyboard::Key::KeyCount> m_justReleasedKeys;
-    static std::array<bool, sf::Keyboard::Key::KeyCount> m_justPressedKeys;
+  // Records change in key states
+  static std::array<bool, sf::Keyboard::Key::KeyCount> m_justReleasedKeys;
+  static std::array<bool, sf::Keyboard::Key::KeyCount> m_justPressedKeys;
 
-    // Records key states
-    static std::array<bool, sf::Keyboard::Key::KeyCount> m_keyStates;
+  // Records key states
+  static std::array<bool, sf::Keyboard::Key::KeyCount> m_keyStates;
 
-    // Allows only the Engine class to modify Keyboard's member variables.
-    friend class Engine;
+  // Allows only the Engine class to modify Keyboard's member variables.
+  friend class Engine;
 };
 ```
 
@@ -101,26 +101,26 @@ Implementation:
 
 ```c++
 bool Keyboard::isKeyReleased(sf::Keyboard::Key key) {
-	return m_justReleasedKeys[key];
+  return m_justReleasedKeys[key];
 }
 
 bool Keyboard::isKeyPressed(sf::Keyboard::Key key) {
-	return m_justPressedKeys[key];
+  return m_justPressedKeys[key];
 }
 
 bool Keyboard::isKeyDown(sf::Keyboard::Key key) {
-	return m_keyStates[key];
+  return m_keyStates[key];
 }
 
 void Keyboard::setKey(sf::Keyboard::Key key, bool pressed) {
-	m_keyStates[key] = pressed;
+  m_keyStates[key] = pressed;
 
-	if (pressed) m_justPressedKeys[key] = true;
-	else m_justReleasedKeys[key] = true;
+  if (pressed) m_justPressedKeys[key] = true;
+  else m_justReleasedKeys[key] = true;
 }
 
 void Keyboard::clearKeyStates() {
-	std::fill(m_justReleasedKeys.begin(), m_justReleasedKeys.end(), false);
-	std::fill(m_justPressedKeys.begin(), m_justPressedKeys.end(), false);
+  std::fill(m_justReleasedKeys.begin(), m_justReleasedKeys.end(), false);
+  std::fill(m_justPressedKeys.begin(), m_justPressedKeys.end(), false);
 }
 ```

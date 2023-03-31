@@ -35,6 +35,10 @@
     @apply mb-4;
   }
 
+  .hljs {
+    @apply text-base;
+  }
+
   p {
     @apply tracking-tighter;
 
