@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "mdast-util-to-string": "^3.1.1",
     "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -25,7 +26,9 @@
     "remark-toc": "^8.0.1",
     "remixicon": "^2.5.0",
     "sass": "^1.60.0",
-    "unified": "^10.1.2"
+    "unified": "^10.1.2",
+    "unist-util-find": "^1.0.2",
+    "unist-util-visit": "^4.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
