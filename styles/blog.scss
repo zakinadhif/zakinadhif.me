@@ -1,6 +1,6 @@
 #article-container {
   h1, h2, h3, h4, h5, h6 {
-    @apply mb-1 mt-6 text-bluemoon;
+    @apply mb-3 mt-8 text-bluemoon;
   }
 
   h1 {
@@ -35,16 +35,8 @@
     @apply mb-4;
   }
 
-  .hljs {
-    @apply text-base;
-  }
-
-  p {
+  p, li {
     @apply tracking-tighter;
-
-    > code {
-      @apply text-orange-500 bg-orange-200 bg-opacity-10 rounded-sm p-1;
-    }
   }
 
   ul li {
@@ -52,6 +44,15 @@
   }
 
   pre {
-    @apply p-2 bg-slate-800 rounded-lg;
+    @apply p-4 bg-slate-800 rounded-lg;
+    
+    > code {
+      @apply text-white bg-transparent bg-opacity-100 rounded-none p-0;
+      @apply md:text-base text-sm
+    }
+  }
+
+  code {
+    @apply text-orange-500 bg-orange-200 bg-opacity-10 rounded-sm p-1;
   }
 }
