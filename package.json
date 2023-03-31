@@ -24,7 +24,7 @@
     "remark-rehype": "^10.1.0",
     "remark-toc": "^8.0.1",
     "remixicon": "^2.5.0",
-    "sass": "^1.59.3",
+    "sass": "^1.60.0",
     "unified": "^10.1.2"
   },
   "devDependencies": {
