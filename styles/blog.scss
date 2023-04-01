@@ -2,14 +2,14 @@
   @apply mt-8;
 
   #toc-container {
-    @apply bg-slate-800 p-4 rounded-sm;
+    @apply p-4 bg-[#0e1018] border border-[#424964] rounded-md mb-5;
 
     h2 {
-      @apply mb-2 mt-0 text-lg;
+      @apply mb-1 mt-0 pt-0 text-lg;
     }
 
     ol { 
-      @apply list-decimal mb-0 pl-8;
+      @apply list-decimal mb-0 pl-8 text-sm;
 
       li {
         @apply mb-1 md:mb-0
@@ -22,7 +22,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply mb-3 mt-8 text-bluemoon;
+    @apply my-4 text-bluemoon;
   }
 
   h1 {
@@ -34,19 +34,19 @@
   }
 
   h2 {
-    @apply text-2xl;
+    @apply text-xl leading-normal;
   }
 
   h3 {
-    @apply text-xl;
+    @apply text-base;
   }
 
   h4 {
-    @apply text-lg;
+    @apply text-sm;
   }
 
   ul, pre, p {
-    @apply mb-4;
+    @apply mb-4 text-sm leading-relaxed;
   }
 
   ul {
@@ -54,11 +54,11 @@
   }
 
   pre {
-    @apply p-3 bg-slate-800 rounded-sm;
+    @apply p-4 bg-[#0e1018] border border-[#424964] rounded-md mt-6 mb-6;
     
     > code {
       @apply text-whitesmoke bg-transparent bg-opacity-100 rounded-none p-0;
-      @apply md:text-base text-sm
+      @apply md:text-sm text-xs
     }
   }
 
