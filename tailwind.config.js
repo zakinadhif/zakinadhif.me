@@ -11,7 +11,7 @@ module.exports = {
       },
       colors: {
         'bluemoon': '#477BFF',
-        'whitesmoke': '#B2B8C7',
+        'whitesmoke': '#c3cadb',
         'smoke': '#7C818E',
       }
     },
