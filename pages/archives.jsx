@@ -27,7 +27,7 @@ export default function Archives({ postsGroupedByYear, postTags, postGroups }) {
       </Head>
       <Navbar />
       <main>
-        <div className="p-4 bg-[#0e1018] border border-[#424964] rounded-md -mt-2 mb-4">
+        <div className="p-4 bg-[#0e1018] border border-[#424964] rounded-md mt-3 mb-6">
           <h2 className="font-medium">Tags:</h2>
           <div className="flex flex-wrap text-bluemoon space-x-3 mb-2">
             {postTags.map(tag => (<Link key={tag} href={`/tags/${tag}`}><a>#{tag}</a></Link>))}
