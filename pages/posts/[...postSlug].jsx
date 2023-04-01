@@ -70,7 +70,6 @@ export default function Post({ postData }) {
         </header>
         <div
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-          className="mt-4"
           id="article-container"
         />
       </main>

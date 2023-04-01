@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Navbar() {
     return (
-        <header className="relative mb-8">
+        <header className="relative mb-4">
             <div className="bg-[url('/assets/code.svg')] w-[78px] h-[55px] bg-contain bg-no-repeat bg-center float-left inline-block mr-6"/>
             <div className="font-bold text-2xl">zakinadhif.my.id</div>
             <nav className="font-light text-sm tracking-widest text-bluemoon hidden md:block">
