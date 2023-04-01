@@ -9,11 +9,12 @@ html, #__next, body {
 }
 
 body {
-  @apply font-jetbrains-mono bg-[#161A26] text-whitesmoke overflow-auto max-w-3xl w-full mx-auto px-6;
+  @apply font-jetbrains-mono bg-[#161A26] text-whitesmoke overflow-auto
+    max-w-3xl w-full mx-auto px-6 text-sm leading-relaxed;
 
   text-rendering: geometricPrecision;
 }
 
 .h2 {
-  @apply text-2xl text-bluemoon mb-4 mt-8 font-medium 
+  @apply text-xl text-bluemoon mb-4 mt-8 font-bold 
 }

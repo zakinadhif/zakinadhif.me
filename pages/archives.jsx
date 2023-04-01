@@ -40,7 +40,7 @@ export default function Archives({ postsGroupedByYear, postTags, postGroups }) {
         <ul>
           {postsGroupedByYear?.map(([year, posts]) => (
             <li key={year}>
-              <h2 className="text-lg font-medium my-2">{year}</h2>
+              <h2 className="text-lg font-bold my-2">{year}</h2>
               <ul>
                 {posts.map((post) => (
                   <li className="md:ml-4 flex flex-col md:flex-row mb-1" key={post.slugStr}>
