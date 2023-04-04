@@ -21,24 +21,24 @@
     }
   }
 
-  .code-figure {
+  div[data-rehype-pretty-code-fragment] {
     @apply mb-4 md:text-sm text-xs;
 
-    figcaption {
+    div[data-rehype-pretty-code-title] {
       @apply px-4 py-2 border-[#424964] border-t border-x rounded-t-md bg-[#141722]
     }
-
-    pre {
-      @apply mt-0 rounded-t-none border-t-0
+    
+    div[data-rehype-pretty-code-title] + pre {
+      @apply mt-0 pt-2 pb-4 rounded-t-none border-t-0
     }
   }
 
   pre {
-    @apply px-4 py-3 bg-[#0e1018] border border-[#424964] rounded-md mt-6 mb-4;
+    @apply my-4 p-4 bg-[#0e1018] border border-[#424964] rounded-md;
     
     > code {
-      @apply text-whitesmoke bg-transparent bg-opacity-100 rounded-none p-0;
-      @apply md:text-sm text-xs
+      @apply text-whitesmoke bg-transparent bg-opacity-100 rounded-none p-0
+        md:text-sm text-xs overflow-auto block;
     }
   }
 
