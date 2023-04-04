@@ -94,11 +94,15 @@
     @apply text-sm;
   }
 
-  ul, pre, p {
-    @apply mb-4 text-sm leading-relaxed;
+  ol, ul, pre, p {
+    @apply mb-4;
+  }
+
+  ol, ul {
+    @apply pl-6;
   }
 
   ul {
-    @apply pl-6 list-disc;
+    @apply list-disc;
   }
 }
