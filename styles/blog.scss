@@ -29,16 +29,40 @@
     }
     
     div[data-rehype-pretty-code-title] + pre {
-      @apply mt-0 pt-2 pb-4 rounded-t-none border-t-0
+      @apply mt-0 rounded-t-none border-t-0
     }
   }
 
   pre {
-    @apply my-4 p-4 bg-[#0e1018] border border-[#424964] rounded-md;
+    @apply my-4 px-4 py-2 bg-[#0e1018] border border-[#424964] rounded-md;
     
-    > code {
+    code {
       @apply text-whitesmoke bg-transparent bg-opacity-100 rounded-none p-0
         md:text-sm text-xs overflow-auto block;
+    }
+
+    code[data-line-numbers] {
+      counter-reset: line;
+    }
+  
+    code[data-line-numbers] > .line::before {
+      counter-increment: line;
+      content: counter(line);
+     
+      /* Other styling */
+      display: inline-block;
+      width: 1rem;
+      margin-right: 1em;
+      text-align: right;
+      color: #333a57;
+    }
+  
+    code[data-line-numbers][data-line-numbers-max-digits="2"] > .line::before {
+      width: 1rem;
+    }
+  
+    code[data-line-numbers][data-line-numbers-max-digits="3"] > .line::before {
+      width: 2rem;
     }
   }
 
