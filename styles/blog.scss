@@ -34,7 +34,7 @@
   }
 
   pre {
-    @apply my-4 px-4 py-2 bg-[#0e1018] border border-[#424964] rounded-md;
+    @apply my-4 p-4 bg-[#0e1018] border border-[#424964] rounded-md;
     
     code {
       @apply text-whitesmoke bg-transparent bg-opacity-100 rounded-none p-0
