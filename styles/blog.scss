@@ -22,14 +22,14 @@
   }
 
   .code-figure {
-    @apply mb-4;
+    @apply mb-4 md:text-sm text-xs;
 
     figcaption {
-      @apply px-4 py-1 border-[#424964] border-t border-x rounded-t-md
+      @apply px-4 py-2 border-[#424964] border-t border-x rounded-t-md bg-[#141722]
     }
 
     pre {
-      @apply mt-0 rounded-t-none
+      @apply mt-0 rounded-t-none border-t-0
     }
   }
 
