@@ -25,7 +25,7 @@ And a good thing to keep in mind that there can be multiple events happening wit
 
 Here’s a snippet of code that handles some window events in SFML:
 
-```cpp
+```cpp filename=main.cpp
 int main() {
   sf::RenderWindow window({400, 400}, "My SFML Window");
 
@@ -70,7 +70,7 @@ There are some things to consider when we want to write a user input interface. 
 
 The difference between the `isUp` and `isPressed` variants is that `isUp` checks for the current state of the button, yet `isPressed` measures the change in key state.
 
-```c++
+```c++ filename=main.cpp
 class Keyboard {
 public:
   Keyboard() = delete;
@@ -99,7 +99,7 @@ private:
 
 Implementation:
 
-```c++
+```c++ filename=keyboard.hpp
 bool Keyboard::isKeyReleased(sf::Keyboard::Key key) {
   return m_justReleasedKeys[key];
 }

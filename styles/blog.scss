@@ -2,7 +2,7 @@
   @apply mt-8;
 
   #toc-container {
-    @apply p-4 bg-[#0e1018] border border-[#424964] rounded-md mb-5;
+    @apply p-4 bg-[#0e1018] border border-[#424964] rounded-md mb-4;
 
     h2 {
       @apply mb-1 mt-0 pt-0 text-lg;
@@ -21,8 +21,33 @@
     }
   }
 
+  .code-figure {
+    @apply mb-4;
+
+    figcaption {
+      @apply px-4 py-1 border-[#424964] border-t border-x rounded-t-md
+    }
+
+    pre {
+      @apply mt-0 rounded-t-none
+    }
+  }
+
+  pre {
+    @apply px-4 py-3 bg-[#0e1018] border border-[#424964] rounded-md mt-6 mb-4;
+    
+    > code {
+      @apply text-whitesmoke bg-transparent bg-opacity-100 rounded-none p-0;
+      @apply md:text-sm text-xs
+    }
+  }
+
+  code {
+    @apply font-jetbrains-mono bg-[#f2f1f1] bg-opacity-10 rounded-sm py-[0.125rem] px-[0.25rem];
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply my-4 text-bluemoon;
+    @apply mb-4 mt-8 text-bluemoon;
   }
 
   h1 {
@@ -51,18 +76,5 @@
 
   ul {
     @apply pl-6 list-disc;
-  }
-
-  pre {
-    @apply p-4 bg-[#0e1018] border border-[#424964] rounded-md mt-6 mb-6;
-    
-    > code {
-      @apply text-whitesmoke bg-transparent bg-opacity-100 rounded-none p-0;
-      @apply md:text-sm text-xs
-    }
-  }
-
-  code {
-    @apply font-jetbrains-mono bg-[#f2f1f1] bg-opacity-10 rounded-sm py-[0.125rem] px-[0.25rem];
   }
 }
